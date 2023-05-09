@@ -1,7 +1,8 @@
-export type Uuid = string;
-
-export type Product = {
-  uuid: Uuid;
+export type ProductToAdd = {
   name: string;
   price: number;
+}
+
+export type Product = ProductToAdd & {
+  _id: { $oid: string },
 };
